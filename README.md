@@ -1,5 +1,5 @@
 # Desafio-Ignite-01
-Template para primeiro Desafio do Ignite. 
+Desafio do primeiro Módulo do BootCamp Ignite
 
 Figma do Projeto:
 https://www.figma.com/file/FZoyDzmt37tgLc7GdjtmZj/to.do-Copy?node-id=10485%3A499n>

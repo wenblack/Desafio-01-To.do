@@ -6,6 +6,10 @@ import { TodoInput } from '../components/TodoInput';
 /*Para validação mais fácil, utilizar uma váriavel nova e comparar 
 com a existente
 */
+export interface Props {
+  id: number,
+  title: string
+}
 
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -42,11 +46,46 @@ export function Home() {
   }
 
   function handleRemoveTask(id: number) {
-    const removerTasks = tasks.filter(
-      task => task.id !== id
+    //Exemplo de Alerta com Confirmaçao
+    Alert.alert(
+      'Remover item',
+      'Tem certeza que você deseja remover esse item?', [
+      {
+        style: 'cancel',
+        text: 'Não'
+
+      },
+      {
+        style: 'destructive',
+        text: 'Sim',
+        onPress: () => {
+          const removerTasks = tasks.filter(
+            task => task.id !== id
+          )
+          setTasks(removerTasks);
+        }
+      }
+    ]
+
     )
-    setTasks(removerTasks);
+
   }
+
+  function handleEditTask({ id, title }: Props) {
+    const updatedTasks = tasks.map(task => ({ ...task }))
+
+
+    const taskAtulizada = updatedTasks.find(item => item.id === id);
+
+    if (!taskAtulizada)
+      return;
+
+    taskAtulizada.title = title;
+    setTasks(updatedTasks)
+
+  }
+
+
 
   return (
     <View style={styles.container}>
@@ -58,6 +97,7 @@ export function Home() {
         tasks={tasks}
         toggleTaskDone={handleToggleTaskDone}
         removeTask={handleRemoveTask}
+        editTask={handleEditTask}
       />
     </View>
   )

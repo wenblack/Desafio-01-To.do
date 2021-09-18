@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
-
+import { Alert, StyleSheet, View } from 'react-native';
 import { Header } from '../components/Header';
 import { Task, TasksList } from '../components/TasksList';
 import { TodoInput } from '../components/TodoInput';
-
-
+/*Para validação mais fácil, utilizar uma váriavel nova e comparar 
+com a existente
+*/
 
 export function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-
-
   function handleAddTask(newTaskTitle: string) {
+    //Exemplo de Validação Início
+    const mesmoTitulo = tasks.find(task => task.title === newTaskTitle)
+
+    if (mesmoTitulo) {
+      return Alert.alert('Task já cadastrada', 'Você não pode cadastrar uma task com o mesmo nome')
+    }
+    //Fim da validação
+
     const novaTask = {
       id: new Date().getTime(),
       title: newTaskTitle,

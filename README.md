@@ -47,7 +47,7 @@ Technologies that I used to develop this mobile client
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/EliasGcf/gobarber-mobile.git && cd gobarber-mobile
+$ git clone https://github.com/wenblack/Desafio-01-To.do && cd Desafio-01-To.do
 ```
 
 **Follow the steps below**
@@ -55,8 +55,6 @@ $ git clone https://github.com/EliasGcf/gobarber-mobile.git && cd gobarber-mobil
 ```bash
 # Install the dependencies
 $ yarn
-
-# Be sure the file 'src/services/api.ts' have the IP to your API
 
 # If you are going to emulate with android, run this command
 # Be sure to have the emulator open

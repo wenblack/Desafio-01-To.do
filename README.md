@@ -26,11 +26,11 @@
 
 ## 👨🏻‍💻 About the project
 
-- <p style="color: red;">
-- App criado durante o Bootcamp da RocketSeat como desafio para aplicar de forma prática os conhecimentos 
-  adquiridos durante o curso. O app utiliza algumas funções nativas e tem a função de criar tarefas,excluir
-  e editar sem permitir que seja cadastrada uma tarefa repetida. 
-- </p>
+ <p style="color: red;">
+App criado durante o Bootcamp da RocketSeat como desafio para aplicar de forma prática os conhecimentos 
+adquiridos durante o curso. O app utiliza algumas funções nativas e tem a função de criar tarefas,excluir
+e editar sem permitir que seja cadastrada uma tarefa repetida. 
+</p>
 
 ## 🚀 Technologies
 
